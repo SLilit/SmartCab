@@ -11836,7 +11836,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import the visualization code</span>
@@ -11959,7 +11959,7 @@ Run the agent.py file after setting the flags from projects/smartcab folder inst
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_no-learning&#39; log file from the initial simulation results</span>
@@ -13064,7 +13064,7 @@ zSYAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>According to the above visualization above, that was produced from the initial simulation, the driving agent making bad decision with frequency in range 0.3946-0.5073.From this around 0.05 - 0.01127 bad decisions cause accident.</li>
+<li>According to the visualization above, that was produced from the initial simulation, the driving agent making bad decision with frequency in range 0.4-0.5 and minor and major accidents is around 0.05 each, which means that 10% of all actions result in accidents.This means if half of actions are bad, then 20% of all bad actions cause accidents.</li>
 <li>Given that the agent is driving randomly without learning, there is probability that agent can get to the destination by chance thereby rate of reliability can still make sense even if it's too small.</li>
 <li>Agent is receiving negative rewards for its actions and that suggest it has been penalized heavily.</li>
 <li>As the numbers of trials increases the outcome of results change positively but not significantly.</li>
@@ -13153,7 +13153,7 @@ zSYAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>When state is defined using the features selected in Question 4, the size of the state space will be 2x4x4x3=96 where 2 is the value for the 'light' feature (True, False) next two 4-s for  'left', 'oncoming' and last 3 is for 'waypoints'. Given what we know about the environment and how it is simulated, I think the driving agent could learn a policy for each possible state within a reasonable number of training trials. </li>
+<li>When state is defined using the features selected in Question 4, the size of the state space will be 2x4x4x3=96 where 2 is the value for the 'light' feature ('red', 'green') next two 4-s for  'left', 'oncoming' and last 3 is for 'waypoints'. Given what we know about the environment and how it is simulated, I think the driving agent could learn a policy for each possible state within a reasonable number of training trials. </li>
 </ul>
 
 </div>
@@ -13214,7 +13214,7 @@ $$ \epsilon_{t+1} = \epsilon_{t} - 0.05, \hspace{10px}\textrm{for trial number }
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_default-learning&#39; file from the default Q-Learning simulation</span>
@@ -14452,7 +14452,7 @@ $$ \epsilon = a^t, \textrm{for } 0 &lt; a &lt; 1 \hspace{50px}\epsilon = \frac{1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Load the &#39;sim_improved-learning&#39; file from the improved Q-Learning simulation</span>
@@ -16203,9 +16203,9 @@ SUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ul>
-<li>For epsilon ϵ = e^(−at),for 0&lt;a&lt;1  function is used.</li>
+<li>For epsilon ϵ = e^(−at),for a=0.01  function is used.</li>
 <li>Approximately 461 training trials were needed for the agent before beginning testing.</li>
-<li>Epsilon - tolerance = 0.01 and alpha = 0.6. Low value for epsilon_tolerance let us to do more training trails and thereby giving the agent chance to explore more. Alpha value is slightly higher than the default value to let the driving agent to learn more.</li>
+<li>Epsilon - tolerance = 0.01 and alpha = 0.7. Low value for epsilon_tolerance let us to do more training trails and thereby giving the agent chance to explore more. Alpha value is slightly higher than the default value to let the driving agent to learn more.</li>
 <li>Q_Learner results showing that driving agent successfully learned an appropriate policy.</li>
 <li>Safety and reliability ratings of the Smartcab are the highest that they can be, so yes I'm satisfied with them. </li>
 </ul>
